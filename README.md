@@ -3,6 +3,8 @@ pyro-list-field
 
 A List field type for PyroCMS
 
+![Screen Shot 2013-02-13 at 2 28 35 PM](https://f.cloud.github.com/assets/1425304/154199/ad9fa5f4-7613-11e2-8cdc-72507b9b28d1.png)
+
 Features
 --------
 
