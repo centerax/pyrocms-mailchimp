@@ -42,6 +42,8 @@ To Do
 * Allow links (url, target, title etc.)
 * Allow setting of key (index or string etc.)
 
+License
+-------
 
 (The MIT License)
 
