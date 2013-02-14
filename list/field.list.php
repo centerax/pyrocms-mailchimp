@@ -12,7 +12,7 @@ class Field_list
 {
 	public $field_type_slug    = 'list';
 	public $db_col_type        = 'text';
-	public $version            = '1.0.0';
+	public $version            = '1.1.0';
 	public $author             = array('name'=>'James Doyle', 'url'=>'http://github.com/james2doyle/pyro-list-field');
 
 	// --------------------------------------------------------------------------

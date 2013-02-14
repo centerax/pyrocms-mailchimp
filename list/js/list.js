@@ -1,5 +1,4 @@
 (function($) {
-  var inputname = [];
   function newListen(elem) {
     $(elem).on('click', '.add', addItem);
     $(elem).on('click', '.remove', removeItem);
