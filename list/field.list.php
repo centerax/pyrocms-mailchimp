@@ -35,9 +35,9 @@ class Field_list
 	{
 		$output = unserialize($data['value']);
 		if (is_null($data['value']) || strlen($output[0]) == 0) {
-			return '<ul id="list_field"><li><textarea name="'.$data['form_slug'].'[0]" class="item_input" placeholder="List item content..."></textarea><div class="btn gray add">+</div><div class="btn gray remove">-</div></li></ul>';
+			return '<ul class="list_field" id="'.$data['form_slug'].'"><li><textarea name="'.$data['form_slug'].'[0]" class="item_input" placeholder="List item content..."></textarea><div class="btn gray add">+</div><div class="btn gray remove">-</div></li></ul>';
 		} else {
-			$str = '<ul id="list_field">';
+			$str = '<ul class="list_field" id="'.$data['form_slug'].'">';
 			foreach ($output as $key => $value) {
 				if (!empty($value)) {
 					$str .= '<li><textarea name="'.$data['form_slug'].'['.$key.']" class="item_input" placeholder="List item content...">'.$value.'</textarea><div class="btn gray add">+</div><div class="btn gray remove">-</div></li>';

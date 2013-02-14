@@ -1,11 +1,11 @@
-#list_field textarea {
+.list_field textarea {
   width: 85%;
   height: 15px;
   max-height: 15px;
   resize: none;
 }
 
-#list_field .btn {
+.list_field .btn {
   font-weight: bold;
   margin-top: -36px;
   margin-left: 10px;
