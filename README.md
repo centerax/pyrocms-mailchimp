@@ -39,6 +39,7 @@ To Do
 -----
 
 * Add sorting/ordering
+* Allow child list items
 * List to string instead of just array
 * Allow styling
 * Allow links (url, target, title etc.)
