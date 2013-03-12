@@ -62,12 +62,16 @@ class Field_list
 	{
 		$input = unserialize($input);
 		$output = array();
-		foreach ($input as $key => $value) {
-			$output[] = array(
-				'key' => $key,
-				'value' => $value,
-				);
-		}
+		if(!empty($output) && is_array($output)):
+			foreach ($input as $key => $value) {
+				$output[] = array(
+					'key' => $key,
+					'value' => $value,
+					);
+			}
+		else:
+			$output = array();	
+		end;
 		return $output;
 	}
 }
