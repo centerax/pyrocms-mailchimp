@@ -12,7 +12,7 @@ class Field_list
 {
 	public $field_type_slug    = 'list';
 	public $db_col_type        = 'text';
-	public $version            = '1.1.0';
+	public $version            = '1.1.1';
 	public $author             = array('name'=>'James Doyle', 'url'=>'http://github.com/james2doyle/pyro-list-field');
 
 	// --------------------------------------------------------------------------
@@ -61,13 +61,15 @@ class Field_list
 	public function pre_output($input, $data)
 	{
 		$input = unserialize($input);
-		$output = array();
-		foreach ($input as $key => $value) {
-			$output[] = array(
-				'key' => $key,
-				'value' => $value,
-				);
+		if ($input) {
+			$output = array();
+			foreach ($input as $key => $value) {
+				$output[] = array(
+					'key' => $key,
+					'value' => $value,
+					);
+			}
+			return $output;
 		}
-		return $output;
 	}
 }
