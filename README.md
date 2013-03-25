@@ -41,7 +41,7 @@ To Do
 * Add sorting/ordering
 * Allow child list items
 * List to string instead of just array
-* Allow styling
+* Allow styling/classes/odd and even
 * Allow links (url, target, title etc.)
 * Allow setting of key (index or string etc.)
 
