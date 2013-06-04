@@ -19,6 +19,8 @@ class Admin extends Admin_Controller {
      */
     protected $_apikey = '';
 
+    protected $section = 'mailchimp';
+
     /**
      * Constructor method
      *
@@ -98,8 +100,9 @@ class Admin extends Admin_Controller {
      * Add a new member to list
      */
     public function new_subscriber() {
+
         //Process member info
-        if (FALSE !== $this->input->post()) {
+        if ( !is_null($this->input->post()) ) {
 
             $vars  = null;
             $fname = $this->input->post('fname');
@@ -118,7 +121,8 @@ class Admin extends Admin_Controller {
             $st = $this->mailchimp_m->api_addemail($this->mcapi, $this->input->post('email'), $this->input->post('list_id'), $vars);
             if (preg_match('/^Error/', $st)) {
                 $data['messages']['error'] = $st;
-            } else {
+            }
+            else {
                 $data['messages']['success'] = $st;
             }
         }
