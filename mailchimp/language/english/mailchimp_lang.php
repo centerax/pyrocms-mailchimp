@@ -23,6 +23,8 @@ $lang['mailchimp.subscriber_info']          = 'Details';
 
 // General labels
 $lang['mailchimp.unknown_list_label']       = 'Unknown List';
+$lang['mailchimp.first_name_label']       = 'First Name';
+$lang['mailchimp.last_name_label']       = 'Last Name';
 $lang['mailchimp.email_on_list']            = '%s on "%s"';
 $lang['mailchimp.all_subscribers_on_tlist'] = 'All subscribers on this list';
 $lang['mailchimp.email_label']              = 'Email';

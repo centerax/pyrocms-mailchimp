@@ -1,7 +1,7 @@
 <section class="title">
 	<h4><?php echo sprintf(lang('mailchimp.list_subscribers_for_list_label'), $mclist_name); ?></h4>
 </section>
-<section class="item">	
+<section class="item">
 	<div class="content">
 		<?php if ( (int)$mcsubscribers['total'] > 0 ): ?>
 			<table border="0" class="table-list">
@@ -20,13 +20,13 @@
 						<td><?php echo $member['email']; ?></td>
 						<td><?php echo format_date($member['timestamp']); ?></td>
 						<td class="align-center buttons buttons-small">
-						    <?php echo anchor('admin/mailchimp/subscriber_detail/' . $listid .'/'.urlencode($member['email']), lang('mailchimp.subscriber_info'), 'class="button"'); ?>
+						    <?php echo anchor('admin/mailchimp/subscriber_detail/' . $listid .'/'.urlencode(str_replace('@', '~at~', $member['email'])), lang('mailchimp.subscriber_info'), 'class="button"'); ?>
 						</td>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		
+
 		<?php else: ?>
 			<div class="blank-slate">
 				<img src="<?php echo base_url().'addons/shared_addons/modules/mailchimp/img/no-records.png' ?>" />

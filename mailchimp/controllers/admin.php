@@ -84,13 +84,13 @@ class Admin extends Admin_Controller {
      */
     public function subscriber_detail($list_id, $email) {
         $data ['title']       = $this->module_details['name'];
-        $data ['mcmember']    = $this->mcapi->listMemberInfo($list_id, urldecode($email));
+        $data ['mcmember']    = $this->mcapi->listMemberInfo($list_id, urldecode(str_replace('~at~', '@', $email)));
         $data ['mclist_name'] = $this->_get_list_name_by_id($list_id);
         $data ['mclistid']    = $list_id;
 
         // Load the view
         $this->template->set($data);
-        $this->template->append_metadata(css('mc_admin.css', 'mailchimp'));
+        //$this->template->append_metadata(css('mc_admin.css', 'mailchimp'));
         $this->template->build('admin/member_info');
     }
 
