@@ -52,7 +52,7 @@ class Admin extends Admin_Controller {
      */
     public function index() {
         $data['title'] = $this->module_details['name'];
-        var_dump($this->_apikey);
+
         if ('' == $this->_apikey) {
             $this->session->set_flashdata('error', lang('mailchimp.no_api_key_error'));
             redirect('admin/settings#mailchimp');
