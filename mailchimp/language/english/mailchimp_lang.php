@@ -1,6 +1,6 @@
 <?php
 // Error notifications
-$lang['mailchimp.no_api_key_error']		= 'No API KEY found, please enter it on the %s section.';
+$lang['mailchimp.no_api_key_error']		= 'No API KEY found, please enter it on the MailChimp config settings.';
 
 // Labels
 $lang['mailchimp.list_members_count_label']	     = 'Member Count';
