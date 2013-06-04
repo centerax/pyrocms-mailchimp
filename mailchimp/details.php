@@ -72,8 +72,15 @@ class Module_Mailchimp extends Module {
     }
 
     public function uninstall() {
-        //TODO Delete settings
-        return TRUE;
+
+        $result = true;
+
+        $uninstallQuery = $this->db->query("DELETE FROM ".$this->db->dbprefix('settings')." WHERE slug = 'mailchimp_apikey'");
+        if(!$uninstallQuery) {
+           $result = false;
+        }
+
+        return $result;
     }
 
     public function upgrade($old_version) {
