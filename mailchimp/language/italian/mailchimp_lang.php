@@ -1,4 +1,5 @@
 <?php
+
 // Error notifications
 $lang['mailchimp.no_api_key_error']		= 'Non è stata trovata nessuna API KEY, per favore inseriscila nelle Impostazioni alla voce MailChimp.';
 
@@ -20,6 +21,8 @@ $lang['mailchimp.comments_disabled_label']	= 'No';
 $lang['mailchimp.published_yes_label']		= 'Si';
 $lang['mailchimp.published_no_label']		= 'No';
 $lang['mailchimp.subscriber_info']          = 'Dettagli';
+$lang['mailchimp.module_name']             = 'MailChimp';
+$lang['mailchimp.mc_lists']                = 'Liste MailChimp';
 
 // General labels
 $lang['mailchimp.unknown_list_label']       = 'Lista Sconosciuta';
