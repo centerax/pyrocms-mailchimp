@@ -34,12 +34,16 @@ class Field_list
 	public function form_output($data)
 	{
 		$output = unserialize($data['value']);
-		if (is_null($data['value']) || strlen($output[0]) == 0) {
+		if (is_null($data['value']) or strlen($output[0]) == 0)
+		{
 			return '<ul class="list_field" id="'.$data['form_slug'].'"><li><textarea name="'.$data['form_slug'].'[0]" class="item_input" placeholder="List item content..."></textarea><div class="btn gray add">+</div><div class="btn gray remove">-</div></li></ul>';
-		} else {
+		}
+		else {
 			$str = '<ul class="list_field" id="'.$data['form_slug'].'">';
-			foreach ($output as $key => $value) {
-				if (!empty($value)) {
+			foreach ($output as $key => $value)
+			{
+				if ( ! empty($value))
+				{
 					$str .= '<li><textarea name="'.$data['form_slug'].'['.$key.']" class="item_input" placeholder="List item content...">'.$value.'</textarea><div class="btn gray add">+</div><div class="btn gray remove">-</div></li>';
 				}
 			}
@@ -55,19 +59,30 @@ class Field_list
 
 	public function pre_save($input)
 	{
-		return serialize($input);
+		// Check for empty list
+		// Don't serialze, use a flag for when we output later
+		return empty($input[0]) ? 0 : serialize($input);
 	}
 
 	public function pre_output($input, $data)
 	{
+
+		// Check for empty list
+		if ( ! $input)
+		{
+			return false;
+		}
+
 		$input = unserialize($input);
+		
 		if ($input) {
 			$output = array();
-			foreach ($input as $key => $value) {
+			foreach ($input as $key => $value)
+			{
 				$output[] = array(
-					'key' => $key,
+					'key'   => $key,
 					'value' => $value,
-					);
+				);
 			}
 			return $output;
 		}
