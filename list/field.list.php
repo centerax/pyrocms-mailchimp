@@ -33,8 +33,8 @@ class Field_list
 	 */
 	public function form_output($data)
 	{
-		$output = unserialize($data['value']);
-		if (is_null($data['value']) or strlen($output[0]) == 0)
+		if(!empty($data['value'][0])) $output = unserialize($data['value']);
+		if (!isset($output) or strlen($output[0]) == 0)
 		{
 			return '<ul class="list_field" id="'.$data['form_slug'].'"><li><textarea name="'.$data['form_slug'].'[0]" class="item_input" placeholder="List item content..."></textarea><div class="btn gray add">+</div><div class="btn gray remove">-</div></li></ul>';
 		}
