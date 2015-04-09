@@ -28,6 +28,7 @@ class Widget_Mailchimp_signup extends Widgets
 
 	public function run($options)
 	{
+		$this->lang->load('mailchimp/mailchimp');
 		return $options;
 	}
 }
