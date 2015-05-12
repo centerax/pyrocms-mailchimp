@@ -5,6 +5,9 @@ $lang['mailchimp.no_api_key_error'] 				= 'Aucune cl&ecaute; de l\'API Mailchimp
 $lang['mailchimp.badformatemail']					= 'L\'adresse courriel n\'est pas valide';
 $lang['mailchimp.emptyemail']						= 'Votre adresse courriel est necessaire.';
 $lang['mailchimp.updatinglist']						= 'Nous vous ajoutons &agrave; notre liste de passion&eacute;';
+$lang['mailchimp.success.emailsent']				= 'Ajout réussi! Regardez dans votre boîte courriel, vous recevrez un courriel pour terminer l\'inscription à l\'infolettre';
+$lang['mailchimp.error']							= 'Erreur';
+$lang['mailchimp.error.unkown']						= 'Erreur inconnue: ';
 
 // Labels
 $lang['mailchimp.list_members_count_label']      	= 'Nombre d\'inscrit';

@@ -44,22 +44,22 @@ class Mailchimp_m extends MY_Model
     */
     public function api_addemail(Mcapi $api, $email = '', $list_id = null, $vars = null)
     {
-
+        $this->lang->load('mailchimp');
 	    // Validation
 	    if(!$email){
-            return "Error: No email address provided";
+            return lang('mailchimp.emptyemail');
         }
 
 	    if(!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*$/i", $email)) {
-		    return "Error: Email address is invalid";
+		    return lang('mailchimp.badformatemail');
 	    }
 
 	    if($api->listSubscribe($list_id, $email, $vars) === TRUE) {
 		    // It worked!
-		    return 'Success! Check your email to confirm sign up.';
+		    return lang('mailchimp.success.emailsent');
 	    }else{
 		    // An error ocurred, return error message
-		    return 'Error: ' . $api->errorMessage;
+		    return lang('mailchimp.error.unkown'). $api->errorMessage;
 	    }
 
     }
