@@ -5,6 +5,8 @@ $lang['mailchimp.no_api_key_error']					= 'No API KEY found, please enter it on 
 $lang['mailchimp.badformatemail']					= 'Enter a valid email address.';
 $lang['mailchimp.emptyemail']						= 'Please enter your email address.';
 $lang['mailchimp.updatinglist']						= 'Adding email address...';
+$lang['mailchimp.success.emailsent']				= 'Success! Check your email to confirm sign up.';
+$lang['mailchimp.error.unkown']						= 'Unkown error: ';
 
 // Labels
 $lang['mailchimp.list_members_count_label']      	= 'Member Count';
